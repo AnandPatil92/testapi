@@ -6,10 +6,9 @@ from sqlalchemy.orm import relationship
 # from app.db.base_class import Base
 
 from mongoengine import Document, IntField, StringField, ListField, BooleanField
-
 # if TYPE_CHECKING:
 #     from .item import Item  # noqa: F401
-
+# from pydantic import BaseModel, str
 
 class Users(Document):
     full_name = StringField(max_length=125)

@@ -10,7 +10,30 @@ from app.models.users import Users
 
 from mongoengine import connect
 
-connect(db="pgmanangement", host="localhost", port=27017)
+from pymongo import MongoClient
+import pymongo
+import dns
+from app.config import settings
+
+# client = MongoClient("mongodb+srv://patilanandgmailcom:Anand8431756067@cluster0.lagmjmk.mongodb.net/pgmanangement?retryWrites=true&w=majority")
+# #client = MongoClient("mongodb+srv://patilanandgmailcom:Anand8431756067@cluster0.lagmjmk.mongodb.net/db = client.test")
+# print(client)
+
+# cluster = "mongodb+srv://patilanandgmailcom:Anand8431756067@cluster0.lagmjmk.mongodb.net/pgmanangement?retryWrites=true&w=majority"
+# print(cluster, "connection successful")
+# cluster =
+#cluster = MongoClient("mongodb+srv://patilanandgmailcom:Anand8431756067@cluster0.lagmjmk.mongodb.net/pgmanagement?retryWrites=true&w=majority")
+
+cluster = "mongodb+srv://patilanandgmailcom:Anand8431756067@cluster0.lcom2x4.mongodb.net/pgapp?retryWrites=true&w=majority"
+client = MongoClient(cluster)
+
+db = client["pgapp"]
+
+collection = db["users"]
+
+# connect(db, alias='default')
+#local connection
+connect(db="pgapp", host=cluster, port=27017)
 
 app = FastAPI()
 
