@@ -10,8 +10,8 @@ from app.models.users import Users
 
 from mongoengine import connect
 
-from pymongo import MongoClient
-import pymongo
+# from pymongo import MongoClient
+# import pymongo
 import dns
 from app.config import settings
 
@@ -25,11 +25,11 @@ from app.config import settings
 #cluster = MongoClient("mongodb+srv://patilanandgmailcom:Anand8431756067@cluster0.lagmjmk.mongodb.net/pgmanagement?retryWrites=true&w=majority")
 
 cluster = "mongodb+srv://patilanandgmailcom:Anand8431756067@cluster0.lcom2x4.mongodb.net/pgapp?retryWrites=true&w=majority"
-client = MongoClient(cluster)
-
-db = client["pgapp"]
-
-collection = db["users"]
+# client = MongoClient(cluster)
+#
+# db = client["pgapp"]
+#
+# collection = db["users"]
 
 # connect(db, alias='default')
 #local connection

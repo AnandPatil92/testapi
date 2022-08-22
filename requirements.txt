@@ -58,4 +58,4 @@ watchfiles==0.16.1
 watchgod==0.8.2
 websockets==10.3
 wsproto==1.1.0
-motor==2.4.0
+
